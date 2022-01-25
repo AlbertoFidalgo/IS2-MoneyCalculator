@@ -1,0 +1,4 @@
+EUR,Euro,€
+USD,Dolar,$
+JPY,Yen,Y
+CAD,Dolar Canadiense,$
