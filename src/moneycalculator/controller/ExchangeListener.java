@@ -20,7 +20,11 @@ public class ExchangeListener implements ActionListener {
             Currency currencyFrom = view.getFromCurrency();
             Currency currencyTo = view.getToCurrency();
             Double amount = view.getAmount();
-
+            
+            if(currencyFrom.equals(currencyTo)){
+                view.setExchange(amount);
+                return;
+            }
             Double result = exchange.exchange(currencyFrom, currencyTo, amount);
             view.setExchange(result);
         } catch (NumberFormatException nfe) {
